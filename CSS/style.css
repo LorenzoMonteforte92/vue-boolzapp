@@ -86,7 +86,7 @@ header{
     padding-bottom: 60px;
 }
 
-.message{
+.ms-message{
     padding: 10px;
     border-radius: 5px;
     background-color: white;
@@ -99,5 +99,11 @@ header{
 
 .sent{
     background-color: #D5F9BA;
+    display: flex;
+    justify-content: start;
+}
+
+.ms-cursor-pointer{
+    cursor: pointer;
 }
 

@@ -86,7 +86,12 @@ createApp({
         };
     },
     methods: {
-      
-    }
+      activateChat(clickedIndex){
+        this.contacts[clickedIndex].visible = !this.contacts[clickedIndex].visible
+        // const [messageSent, messageReceived] = this.contacts[clickedIndex].messages
+        // console.log(messageSent.message)
+        console.log()
+      }
+    },
 }).mount('#app');
 
