@@ -1,15 +1,32 @@
+img{
+    width: 100%
+}
+
 header{
-    height: 15vh;
-    background-color: aqua;
+    height: 18vh;
+    background-color: #009688;
 }
 
 .ms-container-vh{
-    height: calc(100vh - 15vh);
-    background-color: coral;
+    height: calc(100vh - 18vh);
+    background-color: #D9DBD4;
 }
 
-.ms-chat{
-    z-index: 10;
+/* .ms-chat{
     top: 40px;
-    left: 100px
+    left: 100px;
+} */
+
+.userImg{
+    width: 60px;
+    height: 60px;
+
+}
+
+.ms-nav-icon{
+    color: #B1B1B1;
+}
+
+.ms-contact-row{
+    border: 2px solid #D6D6D6;
 }
