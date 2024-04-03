@@ -14,10 +14,8 @@ header{
 
 .ms-chat{
     margin-top: -110px;
-    z-index: 3;
     position: fixed;
-    left: 7%;
-    
+    left: 7%;    
 }
 
 .user-img{
@@ -50,6 +48,10 @@ header{
     background-color: #FAFAFA;
 }
 
+.height-max{
+    height: 100%;
+}
+
 .ms-btn{
     width: 100%;
     border: none;
@@ -69,7 +71,16 @@ header{
     height: 70px;
 }
 
+.ms-chatbox{
+    background-image: url(./mine.jpg);
+    overflow-y: scroll;
+}
+
 .active-contact{
     background-color: #E9EBEB;
+}
+
+.ms-pb{
+    padding-bottom: 60px;
 }
 

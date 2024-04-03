@@ -19,7 +19,6 @@
         <!-- main app screen -->
         <div class="ms-chat container-lg">
             <div class="row">
-                <!-- chat section -->
                 <div class="col-5">
                     <!-- user section -->
                     <div class="row ms-contact-row py-1">
@@ -56,7 +55,7 @@
                     </div>
                     <!-- /search bar -->
                     <!-- contacts section -->
-                    <div class="row">
+                    <div class="row " >
                         <div class="col overflow-y-scroll bg-light">
                             <div class="row py-2"
                                 v-for="singleContact in contacts">
@@ -76,7 +75,7 @@
                     </div>
                     <!-- /contacts section -->
                 </div>
-                <!-- /chat section -->
+            <!-- chat section -->
                 <div class="col-7">
                     <div class="row ms-contact-row border-start-0 py-1">
                         <div class="col d-flex justify-content-start align-items-center gap-2 ps-2">
@@ -92,7 +91,19 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col ms-chatbox ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum at quaerat blanditiis eligendi ipsum quae facilis tempore modi nostrum! Consequatur hic beatae facere sunt deleniti, asperiores veniam ipsa velit iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam, sunt quod pariatur nemo temporibus id error repudiandae corrupti tenetur obcaecati esse, rem reprehenderit rerum eius. Magnam labore obcaecati iure?</div>
+                    </div>
+                    <div class="row p-2 ms-search-sctn">
+                        <div class="col-2 p-0">
+                            <button class="ms-btn p-2" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <div class="col-10 p-0">
+                            <input class="ms-search ps-1" placeholder="Cerca tra le tue chat" type="text">
+                        </div>
+                    </div>
                 </div>
+            <!-- /chat section -->
             </div>
         </div>
         <!-- /main app screen -->
