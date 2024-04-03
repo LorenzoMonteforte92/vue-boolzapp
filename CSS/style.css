@@ -3,18 +3,21 @@ img{
 }
 
 header{
-    height: 20vh;
+    height: 150px;
     background-color: #009688;
 }
 
 .ms-container-vh{
-    height: calc(100vh - 20vh);
+    height: calc(100vh - 150px);
     background-color: #D9DBD4;
 }
 
 .ms-chat{
-    top: 220px;
-    left: 51%;
+    margin-top: -110px;
+    z-index: 3;
+    position: fixed;
+    left: 7%;
+    
 }
 
 .user-img{
@@ -37,6 +40,7 @@ header{
     width: 55px;
     height: 55px;
 }
+
 
 .notification-sctn{
     background-color: #8EDAFC;
@@ -63,5 +67,9 @@ header{
 .contact-img{
     width: 70px;
     height: 70px;
+}
+
+.active-contact{
+    background-color: #E9EBEB;
 }
 
