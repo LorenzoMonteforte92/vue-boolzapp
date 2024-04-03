@@ -1,0 +1,15 @@
+header{
+    height: 15vh;
+    background-color: aqua;
+}
+
+.ms-container-vh{
+    height: calc(100vh - 15vh);
+    background-color: coral;
+}
+
+.ms-chat{
+    z-index: 10;
+    top: 40px;
+    left: 100px
+}
