@@ -15,7 +15,8 @@ header{
 .ms-chat{
     margin-top: -110px;
     position: fixed;
-    left: 7%;    
+    left: 7%; 
+    height: 500px;   
 }
 
 .user-img{
@@ -73,7 +74,7 @@ header{
 
 .ms-chatbox{
     background-image: url(./mine.jpg);
-    overflow-y: scroll;
+    height: 431px;
 }
 
 .active-contact{
