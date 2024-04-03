@@ -75,6 +75,7 @@ header{
 .ms-chatbox{
     background-image: url(./mine.jpg);
     height: 431px;
+    
 }
 
 .active-contact{
@@ -83,5 +84,20 @@ header{
 
 .ms-pb{
     padding-bottom: 60px;
+}
+
+.message{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.sent{
+    background-color: #D5F9BA;
 }
 
