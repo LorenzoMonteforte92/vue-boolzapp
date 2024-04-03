@@ -3,32 +3,32 @@ img{
 }
 
 header{
-    height: 18vh;
+    height: 20vh;
     background-color: #009688;
 }
 
 .ms-container-vh{
-    height: calc(100vh - 18vh);
+    height: calc(100vh - 20vh);
     background-color: #D9DBD4;
 }
 
-/* .ms-chat{
-    top: 40px;
-    left: 100px;
-} */
-
-.userImg{
-    width: 60px;
-    height: 60px;
-
+.ms-chat{
+    top: 220px;
+    left: 51%;
 }
 
-.ms-nav-icon{
+.user-img{
+    width: 50px;
+    height: 50px;
+}
+
+.ms-color-grey{
     color: #B1B1B1;
 }
 
 .ms-contact-row{
     border: 2px solid #D6D6D6;
+    background-color: #EAEAEA;
 }
 
 .ms-notification-logo{
@@ -58,5 +58,10 @@ header{
     width: 100%;
     height: 100%;
     border: 1px solid #D6D6D6;
+}
+
+.contact-img{
+    width: 70px;
+    height: 70px;
 }
 
