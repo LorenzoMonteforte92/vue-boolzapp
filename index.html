@@ -104,18 +104,22 @@
                 <div class="chatbox flex-grow" >
                     <div 
                     class="d-flex justify-end" 
-                            >
-                        <div class="message d-flex flex-column">
-                            <div>ciao</div>
-                            <small class="color-grey text-end" >date</small>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-start" >
-                        <div class="message sent d-flex flex-column" >
-                            <div>ciao ciao</div>
+                    v-for="singleMessage in contacts[activeContact].messages"
+                    :class="{ 'justify-start' : singleMessage.status === `received` }"
+                    >
+                        <div class="message d-flex flex-column"
+                        :class="{ 'sent' : singleMessage.status === `sent` }"
+                        >
+                            <div>{{singleMessage.status}}</div>
                             <small class="color-grey text-end" >[date]</small>
                         </div>
                     </div>
+                    <!-- <div class="d-flex justify-content-start" >
+                        <div class="message d-flex flex-column" >
+                            <div>[message received]</div>
+                            <small class="color-grey text-end" >[date]</small>
+                        </div>
+                    </div> -->
                 </div>
                 <!-- /message space -->
 

@@ -90,7 +90,12 @@ createApp({
     methods: {
       activateChat(clickedIndex){
         this.activeContact = clickedIndex;
+        console.log(this.contacts[clickedIndex].messages[0].status)
       }
     },
+
+    computed: {
+      
+    }
 }).mount('#app');
 
