@@ -84,17 +84,19 @@ createApp({
               },
             ],
 
-            activeContact: 0
+            activeContact: 0,
+            newMessage: ``
         };
     },
     methods: {
       activateChat(clickedIndex){
         this.activeContact = clickedIndex;
+      },
+
+      writeNewMessage(){
+        console.log(this.newMessage)
+        this.newMessage = ``
       }
     },
-
-    computed: {
-
-    }
 }).mount('#app');
 
