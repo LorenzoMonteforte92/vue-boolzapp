@@ -57,22 +57,21 @@
                         <!-- /search bar -->
                         <!-- contacts section -->
                         <div class="col bg-light overflow-y-auto" >
-                            <div class="row py-2 ms-cursor-pointer d-flex"
+                            <div class=" py-2 ms-cursor-pointer d-flex"
                                 v-for="singleContact, index in contacts"
                                 
                                 @click="activateChat(index)">
-                                <div class="col-2 d-flex justify-content-center align-items-center">
+                                <div class="col-2 d-flex justify-content-center align-items-center me-3">
                                     <div class="contact-img rounded-circle">
                                         <img class="rounded-circle" 
-                                            src="./img/avatar_io.jpg" alt="">
+                                            v-bind:src="`./img/avatar${singleContact.avatar}.jpg`" alt="">
                                     </div>
                                 </div>
-                                <div class="col-8 p-0"
-                                > 
-                                        <div class="fw-bold" >{{singleContact.name}}</div>
-                                        <span class="ms-color-grey" ><small>Ultimo messaggio inviato</small></span>
+                                <div class="col-8 pt-3"> 
+                                    <div class="fw-bold" >{{singleContact.name}}</div>
+                                    <span class="ms-color-grey" ><small>Ultimo messaggio inviato</small></span>
                                 </div>
-                                <div class="col-2 ms-color-grey text-end"><small>12:00</small></div>
+                                <div class="col-1 ms-color-grey text-end"><small>12:00</small></div>
                             </div>
                         </div>
                     <!-- /contacts section -->
@@ -114,7 +113,7 @@
                         </div>
                     <!-- /chatbox -->
                     <!-- write bar-->
-                        <div class="row p-2 ms-search-sctn">
+                        <div class="col p-2 ms-search-sctn d-flex">
                             <div class="col-1 p-0">
                                 <button class="ms-btn p-2" ><i class="fa-regular fa-face-smile"></i></button>
                             </div>
