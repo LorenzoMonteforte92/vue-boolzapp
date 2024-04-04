@@ -217,6 +217,14 @@ img{
     gap: 10px;
 }
 
+.single-contact:hover{
+    background-color: #b1b1b161;
+}
+
+.single-contact-active{
+    background-color: #b1b1b161;
+}
+
 .contact-logo-wrap{
     justify-content: center;
     align-items: center;

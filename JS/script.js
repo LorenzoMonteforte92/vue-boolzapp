@@ -83,14 +83,13 @@ createApp({
                 ],
               },
             ],
+
+            activeContact: 0
         };
     },
     methods: {
       activateChat(clickedIndex){
-        this.contacts[clickedIndex].visible = !this.contacts[clickedIndex].visible
-        // const [messageSent, messageReceived] = this.contacts[clickedIndex].messages
-        // console.log(messageSent.message)
-        console.log()
+        this.activeContact = clickedIndex;
       }
     },
 }).mount('#app');

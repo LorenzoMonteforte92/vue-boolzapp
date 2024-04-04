@@ -62,6 +62,7 @@
                 <div class="contacts-field">
                     <div class="single-contact d-flex"
                         v-for="singleContact, index in contacts"
+                        v-bind:class="{ 'single-contact-active' : activeContact === index}"
                          @click="activateChat(index)">
                         <div class="contact-logo-wrap d-flex">
                             <div class="contact-img rounded-circle">
@@ -82,8 +83,13 @@
                 <!-- contact bar -->
                 <div class="user-bar">
                     <div class="user-info">
-                        <div class="user-avatar rounded-circle"><img class="rounded-circle" src="./img/avatar_io.jpg" alt=""></div>
-                        <span class="fw-bold" >Lorenzo</span>
+                        <div class="user-avatar rounded-circle">
+                            <img class="rounded-circle" v-bind:src="`./img/avatar${contacts[activeContact].avatar}.jpg`" alt="">
+                        </div>
+                        <div class="contact-txt flex-grow d-flex flex-column justify-center "> 
+                            <div class="fw-bold" >{{contacts[activeContact].name}}</div>
+                            <span class="color-grey" ><small>Ultimo messaggio inviato</small></span>
+                        </div>
                     </div>
                     <div class="user-icons gap">
                         <i class="fa-solid fa-magnifying-glass"></i>
