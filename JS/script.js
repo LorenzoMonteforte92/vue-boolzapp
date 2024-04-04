@@ -93,8 +93,15 @@ createApp({
         this.activeContact = clickedIndex;
       },
 
-      writeNewMessage(){
-        console.log(this.newMessage)
+      writeNewMessage(contactIndex){
+        // creare un nuovo oggetto message da pushare nell'array "messages" di ciascun contatto
+        //quando scrivo in una chat e invio un messaggio questo vinene pushato dentro l'array con dato indice
+        const newMsg = {
+            date: '10/01/2020 15:30:55',
+            message: this.newMessage,
+            status: 'sent'   
+          }
+        this.contacts[contactIndex].messages.push(newMsg)
         this.newMessage = ``
       }
     },
