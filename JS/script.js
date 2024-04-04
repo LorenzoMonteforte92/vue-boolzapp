@@ -122,6 +122,9 @@ createApp({
 //collegare la barra di ricerca a una variabile
 //in una funzione confrontare il contenuto della variabile col contenuto delle chiavi name di ogni oggetto
 //aggiungi la classe display none a quei contatti la cui chiave nome non corrisponde ai valori della variabile
+      validateSearch(){
+        
+      }
     },
 }).mount('#app');
 

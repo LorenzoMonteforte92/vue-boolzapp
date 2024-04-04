@@ -54,7 +54,8 @@
                     </div>
                     <div class="flex-grow">
                         <input class="search" placeholder="Cerca tra le tue chat" type="text" 
-                        v-model="searchTxt">
+                        v-model="searchTxt"
+                        @keyup="validateSearch">
                     </div>
                 </div>
                 <!-- /search bar -->
