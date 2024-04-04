@@ -14,95 +14,95 @@
 </head>
 <body>
 <div id="app">
-    <header></header>
     <div class="ms-container-vh">
+        <div class="background-top"></div>
+        <div class="background-bottom"></div>
         <!-- main app screen -->
-        <div class="ms-chat container-lg">
-            <div class="row">
-                <div class="col-5">
-                    <!-- user section -->
-                    <div class="row ms-contact-row py-1">
-                        <div class="col d-flex justify-content-start align-items-center gap-2 ps-2">
-                            <div class="user-img rounded-circle"><img class="rounded-circle" src="./img/avatar_io.jpg" alt=""></div>
-                            <span class="fw-bold" >Lorenzo</span>
+        <div class="chat-container d-flex">
+                <div class="ms-col-left container">
+                    <div class="row flex-column">
+                        <!-- user section -->
+                        <div class="col ms-contact-row py-1 d-flex justify-content-between">
+                            <div class="col d-flex justify-content-start align-items-center gap-2 ps-2">
+                                <div class="user-img rounded-circle"><img class="rounded-circle" src="./img/avatar_io.jpg" alt=""></div>
+                                <span class="fw-bold" >Lorenzo</span>
+                            </div>
+                            <div class="col ms-color-grey fs-4 d-flex justify-content-end align-items-center gap-3 pe-3">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
-                        <div class="col ms-color-grey fs-4 d-flex justify-content-end align-items-center gap-3 pe-3">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <!-- /user section -->
+                        <!-- notification area -->
+                        <div class="col notification-sctn p-3 d-flex gap-2">
+                            <div class="col-3 ms-notification-logo rounded-circle text-center d-flex justify-content-center align-items-center fs-4">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="col-9">
+                                <div class="fw-bold" >Ricevi notifiche di nuovi messaggi</div>
+                                <small><a href="#">Attiva notifiche desktop</a></small>
+                            </div>
                         </div>
-                    </div>
-                    <!-- /user section -->
-                    <!-- notification area -->
-                    <div class="row notification-sctn p-3">
-                        <div class="col-3 ms-notification-logo rounded-circle text-center d-flex justify-content-center align-items-center fs-4">
-                            <i class="fa-solid fa-bell-slash"></i>
+                        <!-- /notification area -->
+                        <!-- search bar -->
+                        <div class="col p-2 ms-search-sctn d-flex">
+                            <div class="col-2 p-0">
+                                <button class="ms-btn p-2" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                            <div class="col-10 p-0">
+                                <input class="ms-search ps-1" placeholder="Cerca tra le tue chat" type="text">
+                            </div>
                         </div>
-                        <div class="col-9">
-                            <div class="fw-bold" >Ricevi notifiche di nuovi messaggi</div>
-                            <small><a href="#">Attiva notifiche desktop</a></small>
-                        </div>
-                    </div>
-                    <!-- /notification area -->
-                    <!-- search bar -->
-                    <div class="row p-2 ms-search-sctn">
-                        <div class="col-2 p-0">
-                            <button class="ms-btn p-2" ><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                        <div class="col-10 p-0">
-                            <input class="ms-search ps-1" placeholder="Cerca tra le tue chat" type="text">
-                        </div>
-                    </div>
-                    <!-- /search bar -->
-                    <!-- contacts section -->
-                    <div class="row" >
-                        <div class="col bg-light overflow-y-scroll">
+                        <!-- /search bar -->
+                        <!-- contacts section -->
+                        <div class="col bg-light overflow-y-auto" >
                             <div class="row py-2 ms-cursor-pointer d-flex"
                                 v-for="singleContact, index in contacts"
-                            
+                                
                                 @click="activateChat(index)">
-                               <div class="col-2 d-flex justify-content-center align-items-center">
+                                <div class="col-2 d-flex justify-content-center align-items-center">
                                     <div class="contact-img rounded-circle">
                                         <img class="rounded-circle" 
                                             src="./img/avatar_io.jpg" alt="">
                                     </div>
-                               </div>
-                               <div class="col-8 p-0"
-                               > 
-                                    <div class="fw-bold" >{{singleContact.name}}</div>
-                                    <span class="ms-color-grey" ><small>Ultimo messaggio inviato</small></span>
-                               </div>
-                               <div class="col-2 ms-color-grey text-end"><small>12:00</small></div>
+                                </div>
+                                <div class="col-8 p-0"
+                                > 
+                                        <div class="fw-bold" >{{singleContact.name}}</div>
+                                        <span class="ms-color-grey" ><small>Ultimo messaggio inviato</small></span>
+                                </div>
+                                <div class="col-2 ms-color-grey text-end"><small>12:00</small></div>
                             </div>
                         </div>
-                    </div>
                     <!-- /contacts section -->
+                    </div>
                 </div>
             <!-- chat section -->
-                <div class="col-7">
-                    <div class="row ms-contact-row py-1">
-                        <div class="col d-flex justify-content-start align-items-center gap-2 ps-2">
-                            <div class="user-img rounded-circle"><img class="rounded-circle" src="./img/avatar_io.jpg" alt=""></div>
-                            <span class="fw-bold">Lorenzo</span>
+                <div class="ms-col-right container">
+                    <div class="row flex-column">
+                        <div class="col ms-contact-row py-1 d-flex">
+                            <div class="col d-flex justify-content-start align-items-center gap-2 ps-2">
+                                <div class="user-img rounded-circle"><img class="rounded-circle" src="./img/avatar_io.jpg" alt=""></div>
+                                <span class="fw-bold">Lorenzo</span>
+                            </div>
+                            <div class="col ms-color-grey fs-4 d-flex justify-content-end align-items-center gap-3 pe-3">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
-                        <div class="col ms-color-grey fs-4 d-flex justify-content-end align-items-center gap-3 pe-3">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                    </div>
                     <!-- /user section -->
                 
                     
                     <!-- chatbox -->
-                    <div class="row" >
-                        <div class="col overflow-y-scroll ms-chatbox p-5">
+                        <div class="col p-5 ms-chatbox" >
                             <div class="d-flex justify-content-end" 
                             v-for="singleContact in contacts"
-                                 >
+                                >
                                 <div class="ms-message d-flex flex-column">
-                                    <div>{{singleContact.messages}}</div>
-                                    <small class="ms-color-grey text-end" >{{singleContact.messages[0].date}}</small>
+                                    <div>{{}}</div>
+                                    <small class="ms-color-grey text-end" >{{}}</small>
                                 </div>
                             </div>
                             <!-- <div class="d-flex justify-content-start" >
@@ -112,19 +112,18 @@
                                 </div>
                             </div> -->
                         </div>
-                    </div>
                     <!-- /chatbox -->
                     <!-- write bar-->
-                    <div class="row p-2 ms-search-sctn">
-                        <div class="col-1 p-0">
-                            <button class="ms-btn p-2" ><i class="fa-regular fa-face-smile"></i></button>
+                        <div class="row p-2 ms-search-sctn">
+                            <div class="col-1 p-0">
+                                <button class="ms-btn p-2" ><i class="fa-regular fa-face-smile"></i></button>
+                            </div>
+                            <div class="col-11 p-0">
+                                <input class="ms-search ps-1" placeholder="Scrivi un messaggio" type="text">
+                            </div>
                         </div>
-                        <div class="col-11 p-0">
-                            <input class="ms-search ps-1" placeholder="Scrivi un messaggio" type="text">
-                        </div>
-                    </div>
-                    <!-- /write bar-->
-                </div>
+                        <!-- /write bar-->
+                 </div>
             <!-- /chat section -->
             </div>
         </div>

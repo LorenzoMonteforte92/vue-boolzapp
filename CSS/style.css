@@ -1,23 +1,55 @@
+
+/*-------------
+   GENERAL
+--------------- */
 img{
     width: 100%
 }
 
-header{
-    height: 150px;
+/*-------------
+    LAYOUT
+--------------- */
+
+.background-top{
+    height: 15%;
     background-color: #009688;
 }
 
-.ms-container-vh{
-    height: calc(100vh - 150px);
+.background-bottom{
+    height: 85%;
     background-color: #D9DBD4;
 }
 
-.ms-chat{
-    margin-top: -110px;
-    position: fixed;
-    left: 7%; 
-    height: 500px;   
+.ms-container-vh{
+    height: 100vh;
+    width: 100%;
+    position: relative;
 }
+
+.chat-container{
+    width: 75%;
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);   
+}
+
+.ms-col-right{
+    width: 60%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.ms-col-left{
+    width: 40%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/*-------------
+    USER BAR
+--------------- */
 
 .user-img{
     width: 50px;
@@ -33,6 +65,10 @@ header{
     background-color: #EAEAEA;
 }
 
+/*------------------
+    NOTIFICATIONS
+------------------- */
+
 .ms-notification-logo{
     background-color: white;
     color: #8EDAFC;
@@ -45,12 +81,12 @@ header{
     background-color: #8EDAFC;
 }
 
+/*------------------
+    SEARCH SECTION
+------------------- */
+
 .ms-search-sctn{
     background-color: #FAFAFA;
-}
-
-.height-max{
-    height: 100%;
 }
 
 .ms-btn{
@@ -74,8 +110,18 @@ header{
 
 .ms-chatbox{
     background-image: url(./mine.jpg);
-    height: 431px;
-    
+    overflow-y: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/*------------
+    UTILITY
+-------------- */
+
+
+.height-max{
+    height: 100%;
 }
 
 .active-contact{
@@ -107,3 +153,6 @@ header{
     cursor: pointer;
 }
 
+.ms-chatbox-container{
+    overflow-y: auto;
+}
