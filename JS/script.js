@@ -85,7 +85,8 @@ createApp({
             ],
 
             activeContact: 0,
-            newMessage: ``
+            newMessage: ``,
+            searchTxt: ``
         };
     },
     methods: {
@@ -103,7 +104,24 @@ createApp({
           }
         this.contacts[contactIndex].messages.push(newMsg)
         this.newMessage = ``
-      }
+      },
+
+      replyOk(contactIndex){
+        const newReply = {
+          date: '10/01/2020 15:30:55',
+          message: `ok`,
+          status: 'received'   
+        }
+      this.contacts[contactIndex].messages.push(newReply)
+      },
+      //vedere come far partire il timeout
+      autoReply(){
+        setTimeout(this.replyOk, 1000);
+      },
+
+//collegare la barra di ricerca a una variabile
+//in una funzione confrontare il contenuto della variabile col contenuto delle chiavi name di ogni oggetto
+//aggiungi la classe display none a quei contatti la cui chiave nome non corrisponde ai valori della variabile
     },
 }).mount('#app');
 
