@@ -259,6 +259,7 @@ img{
     background-image: url(./mine.jpg);
     background-size: contain;
     overflow-y: auto;
+    padding: 20px 35px;
 }
 
 .message{
@@ -270,6 +271,7 @@ img{
     position: relative;
     width: 30%;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .sent{

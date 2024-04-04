@@ -84,7 +84,8 @@
                 <div class="user-bar">
                     <div class="user-info">
                         <div class="user-avatar rounded-circle">
-                            <img class="rounded-circle" v-bind:src="`./img/avatar${contacts[activeContact].avatar}.jpg`" alt="">
+                            <img class="rounded-circle" 
+                            :src="`./img/avatar${contacts[activeContact].avatar}.jpg`" alt="">
                         </div>
                         <div class="contact-txt flex-grow d-flex flex-column justify-center "> 
                             <div class="fw-bold" >{{contacts[activeContact].name}}</div>
@@ -101,21 +102,20 @@
 
                 <!-- message space -->
                 <div class="chatbox flex-grow" >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt cumque voluptas reiciendis possimus totam laudantium eius est necessitatibus itaque pariatur? Ratione atque sunt quisquam. Consectetur quo assumenda vero expedita incidunt?
                     <div 
                     class="d-flex justify-end" 
-                    v-for="singleContact in contacts">
+                            >
                         <div class="message d-flex flex-column">
-                            <div>{{singleContact.messages}}</div>
-                            <small class="color-grey text-end" >{{}}</small>
+                            <div>ciao</div>
+                            <small class="color-grey text-end" >date</small>
                         </div>
                     </div>
-                    <!-- <div class="d-flex justify-content-start" >
-                        <div class="message d-flex flex-column" >
+                    <div class="d-flex justify-content-start" >
+                        <div class="message sent d-flex flex-column" >
                             <div>ciao ciao</div>
-                            <small class="ms-color-grey text-end" >[date]</small>
+                            <small class="color-grey text-end" >[date]</small>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 <!-- /message space -->
 
