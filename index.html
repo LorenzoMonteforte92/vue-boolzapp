@@ -110,8 +110,8 @@
                         <div class="message d-flex flex-column"
                         :class="{ 'sent' : singleMessage.status === `sent` }"
                         >
-                            <div>{{singleMessage.status}}</div>
-                            <small class="color-grey text-end" >[date]</small>
+                            <div>{{singleMessage.message}}</div>
+                            <small class="color-grey text-end txt-info" >{{singleMessage.date}}</small>
                         </div>
                     </div>
                     <!-- <div class="d-flex justify-content-start" >

@@ -268,7 +268,7 @@ img{
 
 .message{
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: white;
     flex-grow: 0;
     flex-shrink: 0;
@@ -276,6 +276,11 @@ img{
     width: 30%;
     margin-bottom: 10px;
     border-radius: 5px;
+    gap: 8px
+}
+
+.txt-info{
+    font-size: 10px;
 }
 
 .sent{

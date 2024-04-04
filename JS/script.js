@@ -41,7 +41,7 @@ createApp({
                   {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
+                    status: 'sent'
                   }
                 ],
               },
@@ -90,12 +90,11 @@ createApp({
     methods: {
       activateChat(clickedIndex){
         this.activeContact = clickedIndex;
-        console.log(this.contacts[clickedIndex].messages[0].status)
       }
     },
 
     computed: {
-      
+
     }
 }).mount('#app');
 
