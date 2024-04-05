@@ -86,7 +86,7 @@ createApp({
 
             activeContact: 0,
             newMessage: ``,
-            searchTxt: ``
+            searchTxt: ``,
         };
     },
     methods: {
@@ -106,24 +106,30 @@ createApp({
         this.newMessage = ``
       },
 
-      replyOk(contactIndex){
+      autoReplyOk(contactIndex){
         const newReply = {
           date: '10/01/2020 15:30:55',
           message: `ok`,
           status: 'received'   
         }
-      this.contacts[contactIndex].messages.push(newReply)
-      },
-      //vedere come far partire il timeout
-      autoReply(){
-        setTimeout(this.replyOk, 1000);
-      },
+        setTimeout(() => {
+          this.contacts[contactIndex].messages.push(newReply)
+        }, 1000);
+      },     
 
 //collegare la barra di ricerca a una variabile
-//in una funzione confrontare il contenuto della variabile col contenuto delle chiavi name di ogni oggetto
-//aggiungi la classe display none a quei contatti la cui chiave nome non corrisponde ai valori della variabile
+//inserisco l stringa vuota collegata col v-for in una variabile
+//scorro l'array con un forEach 
+//per ogni contatto mi salvi contact.name in una variabile
+//confronta  
       validateSearch(){
-        
+        const search = this.searchTxt.toLowerCase();
+        this.contacts.forEach((contact) => {
+          const name = contact.name.toLowerCase()
+          contact.visible = name.includes(search);
+        });
+       
+
       }
     },
 }).mount('#app');

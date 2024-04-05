@@ -55,7 +55,7 @@
                     <div class="flex-grow">
                         <input class="search" placeholder="Cerca tra le tue chat" type="text" 
                         v-model="searchTxt"
-                        @keyup="validateSearch">
+                        @keyup="validateSearch()">
                     </div>
                 </div>
                 <!-- /search bar -->
@@ -64,7 +64,9 @@
                 <div class="contacts-field">
                     <div class="single-contact d-flex"
                         v-for="singleContact, index in contacts"
-                        v-bind:class="{ 'single-contact-active' : activeContact === index}"
+                        :class="{ 'd-none' : !singleContact.visible, 
+                        'single-contact-active' : activeContact === index }"
+                        
                          @click="activateChat(index)">
                         <div class="contact-logo-wrap d-flex">
                             <div class="contact-img rounded-circle">
@@ -134,7 +136,7 @@
                         <input class="search padding-write-bar" placeholder="Scrivi un messaggio" type="text" 
                         v-model="newMessage"
                         @keyup.enter="writeNewMessage(activeContact),
-                         replyOk(activeContact)"
+                        autoReplyOk(activeContact)"
                         >
                     </div>
                     <div class="">

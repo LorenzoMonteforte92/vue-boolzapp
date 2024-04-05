@@ -63,6 +63,10 @@ body{
     color: #B1B1B1;
 }
 
+.d-none{
+    display: none;
+}
+
 /*-------------
     GENERAL
 --------------- */
